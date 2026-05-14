@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GKFR_FrenchDimensionFix/bin
+/GKFR_FrenchDimensionFix/libs
+/GKFR_FrenchDimensionFix/obj

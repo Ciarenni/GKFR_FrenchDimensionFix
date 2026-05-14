@@ -26,7 +26,7 @@ namespace GKFR_FrenchDimensionFix
             //harmony.Patch(AccessTools.Method(typeof(LoadingTips), "DisplayRandomBonusTip"), prefix: new HarmonyMethod(patchType, nameof(PrefixDisplayRandomBonusTip)));
         }
 
-        public static bool PrefixDisplayRandomTip(LoadingTips __instance, Localization ___m_localization, Image ___m_mainIamge, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
+        public static bool PrefixDisplayRandomTip(LoadingTips __instance, Localization ___m_localization, Image ___m_mainImage, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
         {
             //set the localization like the original method
             ___m_localization = Localization.instance;
@@ -44,7 +44,7 @@ namespace GKFR_FrenchDimensionFix
             if (__instance.gameObject.activeSelf)
             {
                 //disable the image on the loading screen tooltip, at least for now
-                ___m_mainIamge.transform.parent.gameObject.SetActive(false);
+                ___m_mainImage.transform.parent.gameObject.SetActive(false);
 
                 //hard code the labels, just to indicate the mod is working
                 ___m_titleLabel.text = "Former controls tip";
@@ -55,10 +55,10 @@ namespace GKFR_FrenchDimensionFix
             return false;
         }
 
-        //public static bool PrefixDisplayRandomControlsTip(LoadingTips __instance, Image ___m_mainIamge, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
+        //public static bool PrefixDisplayRandomControlsTip(LoadingTips __instance, Image ___m_mainImage, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
         //{
         //    //disable the image on the loading screen tooltip, at least for now
-        //    ___m_mainIamge.transform.parent.gameObject.SetActive(false);
+        //    ___m_mainImage.transform.parent.gameObject.SetActive(false);
         //    //int a_index = UnityEngine.Random.Range(0, PlayerGameEntities.TutoControlsItems.Length);
         //    //TutorialItem tutorialItem = PlayerGameEntities.TutoControlsItems[a_index];
 
@@ -79,10 +79,10 @@ namespace GKFR_FrenchDimensionFix
         //    return false;
         //}
 
-        //public static bool PrefixDisplayRandomBonusTip(LoadingTips __instance, Image ___m_mainIamge, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
+        //public static bool PrefixDisplayRandomBonusTip(LoadingTips __instance, Image ___m_mainImage, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
         //{
         //    //disable the image on the loading screen tooltip, at least for now
-        //    ___m_mainIamge.transform.parent.gameObject.SetActive(false);
+        //    ___m_mainImage.transform.parent.gameObject.SetActive(false);
         //    //int a_index = UnityEngine.Random.Range(0, PlayerGameEntities.TutoControlsItems.Length);
         //    //TutorialItem tutorialItem = PlayerGameEntities.TutoControlsItems[a_index];
 
@@ -107,10 +107,10 @@ namespace GKFR_FrenchDimensionFix
     //[HarmonyPatch(typeof(LoadingTips), "DisplayRandomControlsTip")]
     //public class LoadingTips_DisplayRandomControlsTip
     //{
-    //    static bool Prefix(LoadingTips __instance, Image ___m_mainIamge, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
+    //    static bool Prefix(LoadingTips __instance, Image ___m_mainImage, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
     //    {
     //        //disable the image on the loading screen tooltip, at least for now
-    //        ___m_mainIamge.transform.parent.gameObject.SetActive(false);
+    //        ___m_mainImage.transform.parent.gameObject.SetActive(false);
     //        //int a_index = UnityEngine.Random.Range(0, PlayerGameEntities.TutoControlsItems.Length);
     //        //TutorialItem tutorialItem = PlayerGameEntities.TutoControlsItems[a_index];
 
@@ -135,10 +135,10 @@ namespace GKFR_FrenchDimensionFix
     //[HarmonyPatch(typeof(LoadingTips), "DisplayRandomBonusTip")]
     //public class LoadingTips_DisplayRandomBonusTip
     //{
-    //    static bool Prefix(LoadingTips __instance, Image ___m_mainIamge, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
+    //    static bool Prefix(LoadingTips __instance, Image ___m_mainImage, TextMeshProUGUI ___m_titleLabel, TextMeshProUGUI ___m_descriptionLabel, Image[] ___m_additionalImages, TextMeshProUGUI ___m_counterLabel)
     //    {
     //        //disable the image on the loading screen tooltip, at least for now
-    //        ___m_mainIamge.transform.parent.gameObject.SetActive(false);
+    //        ___m_mainImage.transform.parent.gameObject.SetActive(false);
     //        //int a_index = UnityEngine.Random.Range(0, PlayerGameEntities.TutoControlsItems.Length);
     //        //TutorialItem tutorialItem = PlayerGameEntities.TutoControlsItems[a_index];
 

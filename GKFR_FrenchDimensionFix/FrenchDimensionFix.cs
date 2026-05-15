@@ -179,7 +179,8 @@ namespace GKFR_FrenchDimensionFix
             "#164 \"I think we gotta bang it out\" - rays 2026",
             "#165 \"Watching the sucking technology. I finish it here.\" -rays 2026, Luigi's Mansion",
             "#166 \"I'm definitely not ace, though\" - rays, 2026",
-            "#167 \"GC fans LOVE penis music dude\" - Roy, 2026"
+            "#167 \"GC fans LOVE penis music dude\" - Roy, 2026",
+            "\"Chat-rivari chez Jon\" - the original inspiration behind this mod"
         };
 
         private void Awake()
